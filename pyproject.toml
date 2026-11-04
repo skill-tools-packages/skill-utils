@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill-utils"
+version = "0.4.0"
+authors = [
+  { name="Skill Tools Packages" },
+]
+description = "A collection of helpful tools and functions for use with Claude skills"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "markdown-it-py>=4,<5",
+    "mdformat>=1,<2",
+    "mdformat-gfm>=1,<2",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/skill-tools-packages/skill-utils"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
